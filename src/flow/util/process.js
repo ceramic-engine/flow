@@ -22,6 +22,7 @@ var   exec = require('child_process').exec
 
             args = args || [];
             opt = opt || { env:process.env };
+            if (!opt.env) opt.env = process.env;
 
             var _process = spawn(cmd, args, opt);
             var stderr = '';
